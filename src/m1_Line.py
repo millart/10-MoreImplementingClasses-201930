@@ -4,8 +4,8 @@ NOTE: This is NOT rosegraphics -- it is your OWN Line class.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Emily Millard.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import math
 import m1t_test_Line as m1t
@@ -17,7 +17,7 @@ import m1t_test_Line as m1t
 ###############################################################################
 
 # -----------------------------------------------------------------------------
-# TODO: 2.  Right-click on the  src  folder and
+# DONE: 2.  Right-click on the  src  folder and
 #               Mark Directory as ... Sources Root,
 #           if you have not already done so.
 #
@@ -226,6 +226,9 @@ class Line(object):
         #        They include the Example in the above doc-string.
         # ---------------------------------------------------------------------
 
+        self.start = start.clone()
+        self.end = end.clone()
+
     def __repr__(self):
         """
         What comes in:
@@ -343,6 +346,8 @@ class Line(object):
         Side effects: MUTATES this Line so that its direction is reversed
         (that is, its start and end points are swapped).
         ** Must NOT mutate its start and end points -- just SWAP them. **
+        (self.start and self.end will change)
+        use a third variable (ex: temp to save a variable when switching)
 
         Examples:
             p1 = Point(30, 17)
